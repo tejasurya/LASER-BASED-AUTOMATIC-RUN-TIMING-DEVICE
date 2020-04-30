@@ -1,0 +1,243 @@
+body{font-family:Verdanna, sans-serif;}
+kbd{
+font-family:Courier New, monospace;
+font-weight:bold;
+}
+#sharing{
+position:absolute;
+top:10px;
+right:10px;
+}
+#mainFunction{
+text-align:center;
+width:550px;
+margin-left:auto; 
+margin-right:auto;
+margin-top:0;
+margin-bottom:0;
+}
+.mainButton {
+border:solid;
+border-color:gray;
+border-width:2px;
+background: #aaa;
+color: #fff;
+text-decoration: none;
+cursor: pointer;
+font-family:Verdanna, sans-serif;
+width:150px;
+font-size:19px;
+margin-left:10px;
+margin-right:10px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+.mainButton.green{background:#7CFC00;}
+.mainButton.red{display:visible;background:red;}
+.mainButton[class]{
+background-image: url(../images/shade.png);
+background-position: bottom;
+}
+* html .mainButton.green{background:#75ca22;} /* hack for internet explorer 6*/
+* html .mainButton.red{background:#c71d1d;} /* hack for internet explorer 6*/
+#startButton{
+display:inline;
+}
+#navigation{
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+width:100%;
+margin-left:auto; 
+margin-right:auto;
+bottom:0;
+left:0;
+text-align:center;
+background-color:gray;
+border-top:1px solid #727272;
+}
+.navigationButton{
+display:inline;
+text-align:center;
+width:110px;
+font-family:Verdanna, sans-serif;
+font-weight:bold;
+font-size:16px;
+padding:8px;
+color:white;
+border:0;
+cursor:pointer;
+background-color:gray;
+}
+.navigationButton:hover
+{
+color:black;
+}
+.selectorOptions{
+text-align:center;
+margin:0;
+margin-bottom:12px;
+padding:0;
+}
+.selectorOptionsButton{
+display:inline;
+list-style:none;
+padding-top:4px;
+padding-bottom:4px;
+padding-left:6px;
+padding-right:6px;
+font-family:Verdanna, sans-serif;
+font-weight:bold;
+text-align:left;
+}
+#selectorDetailOptions{
+margin:0;
+margin-bottom:12px;
+padding:0;
+}
+.selectorDetailOptionsButton{
+list-style:none;
+padding-top:4px;
+padding-bottom:4px;
+padding-left:6px;
+padding-right:6px;
+font-family:Verdanna, sans-serif;
+font-weight:bold;
+}
+.selectorDetailOptionsText{
+font-weight:normal;
+}
+.selectorDetailOptionsButton2{
+list-style:disc;
+}
+#backgroundPopup{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+height:100%;
+width:100%;
+top:0;
+left:0;
+background:#000000;
+border:1px solid #cecece;
+z-index:1;
+}
+.popup{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+width:478px;
+background:white;
+border:2px solid #cecece;
+z-index:2;
+padding:12px;
+font-size:12px;
+}
+.popup h1{
+text-align:left;
+font-size:26px;
+font-family:Verdanna, sans-serif;
+color:black;
+border-bottom:1px dotted gray;
+padding-bottom:2px;
+margin-bottom:20px;
+}
+.popup h2{
+text-align:left;
+font-size:15px;
+font-family:Verdanna, sans-serif;
+color:black;
+padding-bottom:2px;
+margin-bottom:10px;
+}
+.popup p{
+text-align:justify;
+}
+.popup dd{
+margin-left:110px;
+margin-bottom:5px;
+}
+.popup dt{
+float:left;
+font-family:Verdanna, sans-serif;
+font-weight:bold;
+}
+.popup img{
+margin-left:20px;
+margin-bottom:15px;
+}
+.floating{
+float:right;
+}
+.popupClose{
+font-family:Courier New, monospace;
+font-size:20px;
+line-height:14px;
+right:6px;
+top:4px;
+position:absolute;
+color:black;
+font-weight:700;
+display:block;
+}
+.ErrorMsg{
+border:solid 1px #CC0000; 
+background:#F7CBCA;
+color:#CC0000;
+font-weight:bold;
+padding:4px;
+text-align:center;
+width:70%;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+}
+.closeErrorMsg{
+position:absolute;
+display:block;
+right:4px;
+top:2px;
+}
+#noFlashMsg{
+display:none;
+}
+#Language{
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+bottom:45px;
+right:8px;
+z-index:-1;
+}
+* html #Language{
+z-index:1;
+}
+.InfoMsg{
+font-family:Verdanna, sans-serif;
+font-size:14px;
+color:gray;
+font-weight:bold;
+text-align:center;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+left: 50%;
+margin-left: -364px;
+bottom:45px;
+z-index:-1;
+}
+* html .InfoMsg{
+z-index:1;
+}
+.InfoMsg a:link {color:#75ca22}
+.InfoMsg a:visited {color:#75ca22}
+.InfoMsg a:hover {color:#75ca22}
+.InfoMsg a:active {color:#75ca22}
+/* IE6 Hack */
+* html{
+overflow-y: hidden;
+}
+* html body{
+overflow-y: auto;
+height: 100%;
+font-size: 100%;
+}
+/* END */

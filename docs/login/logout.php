@@ -1,0 +1,11 @@
+<?php
+session_start();
+  ini_set('session.cache_limiter','public');
+  session_cache_limiter(false);
+  unset($_SESSION["myvalue"]);
+  unset($_SESSION["details"]);
+  unset($_SESSION["page"]);
+  unset($_SESSION['pages']);
+session_destroy();
+header('location:index.php');
+ ?>

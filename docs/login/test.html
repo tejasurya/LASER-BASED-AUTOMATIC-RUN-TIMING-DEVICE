@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/details-style.css">
+  <script type="text/javascript" src="scripts/details.js">
+</script>
+</head>
+
+<body class="align">
+
+    <div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Select the Number of Tracks
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">1 Track</a>
+      <a href="#">2 Tracks</a>
+      <a href="#">3 Tracks</a>
+      <a href="#">4 Lane</a>
+      <a href="#">5 Tracks</a>
+      <a href="#">6 Tracks</a>
+      <a href="#">7 Lane</a>
+      <a href="#">8 Tracks</a>
+      <a href="#">9 Tracks</a>
+      <a href="#">10 Tracks</a>
+    </div>
+  </div> 
+</div>
+  <form action="details.php" name="myForm"  class="form login" onsubmit="return validateForm()">
+        <div class="form__field">
+          <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Username</span></label>
+          <input id="Lane number" type="text" name="Track" class="form__input" placeholder="Lane" required>
+          <input id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+        </div>
+
+        <div class="form__field">
+          <input type="submit" value="Save" >
+        </div>
+    </form>
+    </div>
+  </body>
+</html>

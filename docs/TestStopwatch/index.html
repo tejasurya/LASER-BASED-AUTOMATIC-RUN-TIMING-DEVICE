@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Offline Stopwatch</title>
+	<link rel="stylesheet" href="css/common_v1.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="css/stopwatch_v1.css" type="text/css" media="screen" />
+   <script type="text/javascript" src="application/stopwatch.js"></script>
+	<script type="text/javascript">
+var i=0;
+function myFunction() {
+    var table = document.getElementById('savedTimeTable');
+    var row = table.insertRow(i+1);
+    var cell3 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    i++;
+    var	obj = x.time();
+    var label = document.createElement("Label");
+    label.setAttribute("id","time"+i);
+    var seconds = obj/1000;
+    label.innerHTML = (seconds-0.7).toFixed(3);
+    cell2.appendChild(label);
+
+    var element = document.createElement("input");
+    element.setAttribute("type", "text");
+    element.setAttribute("id", "cm"+i);
+    element.setAttribute("style", "width:300px");
+    cell3.appendChild(element);
+}
+var hidden = false;
+function hide() {
+        hidden = !hidden;
+        if(hidden) {
+            var audio = new Audio('gunshot.mp3');
+             audio.play();
+            setTimeout(start, 700);
+            document.getElementById('startButton').style.visibility = 'hidden';
+        }
+        //start();
+   }
+function hidestop() {
+        hidden = true;
+            document.getElementById('stopButton').style.visibility = 'visible';
+        stop();
+   }
+	</script>
+    <style>
+    .container {
+    padding: 16px;
+}
+</style>
+</head>
+<body onload="show();" style="text-align:center">
+    <div id="container">
+<img src="tn-police.png" alt="TN police logo" width="200" height="200" align="left">
+ <br><br><br>
+<p style="text-align:center;"><font size="6" color="#000000"> TAMIL NADU UNIFORMED SERVICES RECRUITMENT BOARD </font>
+</div>
+<br><br><br><br>
+<span id="time" >00:00:00.000</span>
+<br>
+<br>
+	<form>
+	<div id="mainFunction">
+		<button type="button" title="Start" id="startButton" class="mainButton green" onclick="hide();">Start</button>
+		<button type="button" title="Stop" id="stopButton" class="mainButton red" onclick="hidestop();">Stop</button>
+		<button type="button" title="Split" id="splitButton" class="mainButton green" onclick="myFunction();">Split</button>
+	</div>
+	</form>
+</p>
+	<div id="savedTimePlace">
+		<table id="savedTimeTable" cellspacing="0" cellpadding="10" >
+			<thead>
+				<tr>
+                        <th class="columnType6 columnHead" id="lane number"><p style="text-align:left"> Lane-number - Name </p> </th>
+                        <th class="columnType2 columnHead" id="elapsed">Elapsed-time</th>
+		    </tr>
+			</thead>
+		<tfoot>
+                <tr>
+                    <td colspan="6" align="right"><img id="exportButton" src="images/pdf.png" width="70" height="70" alt="PDF export button"  onclick="print();" /></td>
+                </tr>
+            </tfoot>
+        	<tbody>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
